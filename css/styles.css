@@ -3020,7 +3020,11 @@ section#contact .contact-wrapper .sending {
 
 /* desktop */
 @media screen and (min-width: 1000px) {
-
+    
+    body{
+        overflow-x: hidden;
+    }
+    
     section#intro .introhomalogo {
         max-width: 300px;
         margin: 0px auto 25px auto;

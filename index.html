@@ -787,8 +787,6 @@
     <script>
         Splide.defaults = {
             type: 'slide',
-            arrows: false,
-            autoplay: false,
             lazyLoad: 'sequential'
         }
 
@@ -818,7 +816,7 @@
             } else {
                 isOpen = true
                 amenityCurrentlyOpen = $(this).attr('data-id')
-
+  
                 // Quitar las clases vis y hid del texto y del icono, en caso de que tenga
                 $('section#amenities .mpb').removeClass('vis').addClass('hid');
                 $('section#amenities .mpb .text').removeClass('vis').addClass('hid');
