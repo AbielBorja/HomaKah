@@ -785,53 +785,40 @@
 
     <script src="js/splide.min.js"></script>
     <script>
+        /* CARRUCEL */
         Splide.defaults = {
             type: 'slide',
             lazyLoad: 'sequential'
         }
-
         var splideMP = new Splide('#masterplan-slider', {
             type: 'fade',
         });
         splideMP.mount();
-
-        /* Class Amenities */
+        /* --------------------- */
+        /*RESPONSIVE */
         let isOpen = false
         let amenityCurrentlyOpen = ""
-
         $('section#amenities .mpb').on('click', function(s) {
-
             if (isOpen && amenityCurrentlyOpen == $(this).attr('data-id')) {
                 isOpen = false
                 amenityCurrentlyOpen = ""
-
-                // Eliminar las clases de la sección de amenities, el texto y el icono
-                $('#amenities .mpb').removeClass('vis').removeClass('hid');
+                $('#amenities .mpb').removeClass('vis').removeClass('hid');// Eliminar las clases de la sección de amenities, el texto y el icono
                 $('#amenities .mpb .text').removeClass('vis').removeClass('hid');
                 $('#amenities').removeClass();
-
-                // Añadir la clase escondida en amenities-stage y cerrar
-                $('section#amenities .amenities-stage').addClass('hid');
-
+                $('section#amenities .amenities-stage').addClass('hid'); // Añadir la clase escondida en amenities-stage y cerrar
             } else {
                 isOpen = true
                 amenityCurrentlyOpen = $(this).attr('data-id')
-  
-                // Quitar las clases vis y hid del texto y del icono, en caso de que tenga
                 $('section#amenities .mpb').removeClass('vis').addClass('hid');
                 $('section#amenities .mpb .text').removeClass('vis').addClass('hid');
                 $(this).removeClass('hid').addClass('vis');
-
-                // eliminar todas las clases de #amenities, en caso de que tenga
                 $('#amenities').removeClass();
                 let idClass = $(this).attr('data-id');
                 $('#amenities').addClass('open').addClass(idClass);
-
-                // Quitar el hid de la etapa de servicios
-                $('section#amenities .amenities-stage').removeClass('hid');
+                $('section#amenities .amenities-stage').removeClass('hid');                 // Quitar el hid de la etapa de servicios
             }
         });
-
+        /* -------------- */
     </script>
 </body>
 

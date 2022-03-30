@@ -3077,8 +3077,8 @@ section#contact .contact-wrapper .sending {
     }
 
     section#amenities .amenitieslocations{
-        max-width: 80%;
-        margin-left: 10%;
+        max-width: 70%;
+        margin: auto
     }
     
     section#amenities .amenities-stage h2 {
@@ -3087,5 +3087,9 @@ section#contact .contact-wrapper .sending {
     
     section#amenities .amenities-stage ul li{
         font-size: 20px;
+    }
+    
+    .section-wrapper{
+        max-width: none;
     }
 }
