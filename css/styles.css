@@ -108,6 +108,7 @@ section {
 
 body {
     line-height: 1;
+    overflow-x: hidden;
 }
 
 ol,
@@ -3075,4 +3076,16 @@ section#contact .contact-wrapper .sending {
         font-size: 110%;
     }
 
+    section#amenities .amenitieslocations{
+        max-width: 80%;
+        margin-left: 10%;
+    }
+    
+    section#amenities .amenities-stage h2 {
+        font-size: 40px;
+    }
+    
+    section#amenities .amenities-stage ul li{
+        font-size: 20px;
+    }
 }
